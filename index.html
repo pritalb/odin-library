@@ -7,9 +7,22 @@
     <title>Library</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1> Library </h1>
+
+    <div class="add-book-form">
+        <label for="title"> Book Title </label> <input type="text" name="title" class="title">
+        <label for="author"> Author </label> <input type="text" name="author" class="author">
+        <label for="num-of-pages"> Number of Pages </label> <input type="text" name="num-of-pages" class="num-of-pages">
+        <label for="is-read"> Have you read it? </label> <input type="checkbox" name="is-read" class="is-read">
+
+        <button class="add-book-form-submit-btn"> Submit </button>
+    </div>
+
+    <div class="library">
+
+    </div>
 </body>
 </html>

@@ -53,19 +53,26 @@ function displayBook(book) {
     let isRead = document.createElement('div');
     isRead.innerText = `Has the book been read? : ${book.isRead ? 'yes' : 'no'}`;
 
+    let deleteBtn = document.createElement('button');
+    deleteBtn.innerText = 'Remove book';
+    deleteBtn.addEventListener('click', ()=> {
+        removeBookFromLibrary(book.id);
+    })
+
     let card = document.createElement('div');
     card.className = 'book-card';
     card.append(title);
     card.append(author);
     card.append(numOfPages);
     card.append(isRead);
+    card.append(deleteBtn);
 
     document.querySelector('.library').append(card);
 }
 
 function displayLibrary() {
     document.querySelector('.library').innerHTML = '';
-    
+
     library.forEach(book => {
         console.log(book);
 

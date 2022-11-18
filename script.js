@@ -40,9 +40,36 @@ function createBook() {
     addBooktoLibrary(title, author, numOfPages, isRead);
 }
 
+function displayBook(book) {
+    let title = document.createElement('div');
+    title.innerText = book.title;
+
+    let author = document.createElement('div');
+    author.innerText = book.author;
+
+    let numOfPages = document.createElement('div');
+    numOfPages.innerText = book.numOfPages;
+
+    let isRead = document.createElement('div');
+    isRead.innerText = `Has the book been read? : ${book.isRead ? 'yes' : 'no'}`;
+
+    let card = document.createElement('div');
+    card.className = 'book-card';
+    card.append(title);
+    card.append(author);
+    card.append(numOfPages);
+    card.append(isRead);
+
+    document.querySelector('.library').append(card);
+}
+
 function displayLibrary() {
+    document.querySelector('.library').innerHTML = '';
+    
     library.forEach(book => {
         console.log(book);
+
+        displayBook(book);
     })
 }
 

@@ -42,26 +42,36 @@ function createBook() {
 }
 
 function displayBook(book) {
+    let label = document.createElement('label');
+    let info_container = document.createElement('div');
+
     let title = document.createElement('div');
     title.className = 'book-card-element';
-    title.append(document.createElement('label').innerText = 'Book Title: ');
-    title.append(document.createElement('div').innerText = book.title);
-    // title.innerText = book.title;
+    label.innerText = 'Book Title: ';
+    info_container.innerText = book.title;
+    title.append(label.cloneNode(true));
+    title.append(info_container.cloneNode(true));
 
     let author = document.createElement('div');
     author.className = 'book-card-element';
-    author.append(document.createElement('label').innerText = 'Book Author: ');
-    author.append(document.createElement('div').innerText = book.author);
+    label.innerText = 'Book Author: ';
+    info_container.innerText = book.author;
+    author.append(label.cloneNode(true));
+    author.append(info_container.cloneNode(true));
 
     let numOfPages = document.createElement('div');
     numOfPages.className = 'book-card-element';
-    numOfPages.append(document.createElement('label').innerText = 'Total Pages: ');
-    numOfPages .append(document.createElement('div').innerText = book.numOfPages);
+    label.innerText = 'Total Pages: ';
+    info_container.innerText = book.numOfPages;
+    numOfPages.append(label.cloneNode(true));
+    numOfPages.append(info_container.cloneNode(true));
 
     let isRead = document.createElement('div');
     isRead.className = 'book-card-element';
-    isRead.append(document.createElement('label').innerText = 'Done Reading? ');
-    isRead.append(document.createElement('div').innerText = book.isRead ? 'Yes' : 'No');
+    label.innerText = 'Done Reading? ';
+    info_container.innerText = book.isRead ? 'Yes' : 'No';
+    isRead.append(label.cloneNode(true));
+    isRead.append(info_container.cloneNode(true));
 
     let deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'Remove book';

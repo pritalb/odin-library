@@ -43,22 +43,32 @@ function createBook() {
 
 function displayBook(book) {
     let title = document.createElement('div');
-    title.innerText = book.title;
+    title.className = 'book-card-element';
+    title.append(document.createElement('label').innerText = 'Book Title: ');
+    title.append(document.createElement('div').innerText = book.title);
+    // title.innerText = book.title;
 
     let author = document.createElement('div');
-    author.innerText = book.author;
+    author.className = 'book-card-element';
+    author.append(document.createElement('label').innerText = 'Book Author: ');
+    author.append(document.createElement('div').innerText = book.author);
 
     let numOfPages = document.createElement('div');
-    numOfPages.innerText = book.numOfPages;
+    numOfPages.className = 'book-card-element';
+    numOfPages.append(document.createElement('label').innerText = 'Total Pages: ');
+    numOfPages .append(document.createElement('div').innerText = book.numOfPages);
 
     let isRead = document.createElement('div');
-    isRead.innerText = `Has the book been read? : ${book.isRead ? 'yes' : 'no'}`;
+    isRead.className = 'book-card-element';
+    isRead.append(document.createElement('label').innerText = 'Done Reading? ');
+    isRead.append(document.createElement('div').innerText = book.isRead ? 'Yes' : 'No');
 
     let deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'Remove book';
     deleteBtn.addEventListener('click', ()=> {
         removeBookFromLibrary(book.id);
     })
+    deleteBtn.className = 'book-remove-btn';
 
     let card = document.createElement('div');
     card.className = 'book-card';
@@ -97,7 +107,7 @@ function main() {
     document.querySelector('.add-book-btn').addEventListener('click', toggle_add_book_form);
 
     toggle_add_book_form();
-    // addBooktoLibrary('book name', 'dude', 15, false);
+    addBooktoLibrary('book name', 'dude', 15, false);
     // addBooktoLibrary('great book', 'other dude', 156, true);
     // addBooktoLibrary('some book name', 'dude', 215, false);
     // addBooktoLibrary('long book name', 'professor dude', 615, false);

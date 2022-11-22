@@ -1,6 +1,6 @@
 let library = [];
 let available_book_id = 1;
-let show_add_book_form = false;
+let show_add_book_form = true;
 
 function Book(title, id, author, numOfPages, isRead) {
     this.title = title;
@@ -107,7 +107,7 @@ function toggle_add_book_form() {
     let add_book_form = document.querySelector('.add-book-form');
 
     if (show_add_book_form) {
-        add_book_form.style.display = 'block';
+        add_book_form.style.display = 'flex';
     } else {
         add_book_form.style.display = 'none';
     }

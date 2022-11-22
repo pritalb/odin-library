@@ -43,7 +43,9 @@ function createBook() {
 
 function displayBook(book) {
     let label = document.createElement('label');
+    label.className = 'book-card-label';
     let info_container = document.createElement('div');
+    info_container.className = 'book-card-info';
 
     let title = document.createElement('div');
     title.className = 'book-card-element';

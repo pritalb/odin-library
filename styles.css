@@ -8,12 +8,14 @@ body {
 .book-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 400px;
+    align-items: flex-start;
+    min-height: 400px;
     width: 300px;
+    gap: 1rem;
     border-radius: 32px;
     padding-top: 18px;
-    font-size: 1.25rem;
+    padding-left: 18px;
+    font-size: 2rem;
     background-color: #222222;
 }
 

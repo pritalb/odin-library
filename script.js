@@ -119,6 +119,10 @@ function main() {
 
     // toggle_add_book_form();
     addBooktoLibrary('book name', 'dude', 15, false);
+    addBooktoLibrary('book name', 'dude', 15, false);
+    addBooktoLibrary('book name', 'dude', 15, false);
+    addBooktoLibrary('book name', 'dude', 15, false);
+    addBooktoLibrary('book name', 'dude', 15, false);
     // addBooktoLibrary('great book', 'other dude', 156, true);
     // addBooktoLibrary('some book name', 'dude', 215, false);
     // addBooktoLibrary('long book name', 'professor dude', 615, false);

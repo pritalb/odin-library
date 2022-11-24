@@ -48,6 +48,18 @@ body {
     border-radius: 6px;
 }
 
+.library {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    padding-top: 48px;
+    padding-left: 42px;
+    padding-right: 42px;
+    column-gap: 1rem;
+    row-gap: 3rem;
+    grid-auto-rows: 350px;
+}
+
 .book-card {
     display: flex;
     flex-direction: column;

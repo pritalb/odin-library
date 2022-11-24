@@ -45,22 +45,15 @@ function displayBook(book) {
     let label = document.createElement('label');
     label.className = 'book-card-label';
     let info_container = document.createElement('div');
-    info_container.className = 'book-card-info';
 
     let title = document.createElement('div');
-    title.className = 'book-card-element';
-    label.innerText = 'Book Title: ';
-    info_container.innerText = book.title;
-    title.append(label.cloneNode(true));
-    title.append(info_container.cloneNode(true));
+    title.className = 'book-card-title';
+    title.innerText = book.title;
 
     let author = document.createElement('div');
-    author.className = 'book-card-element';
-    label.innerText = 'Book Author: ';
-    info_container.innerText = book.author;
-    author.append(label.cloneNode(true));
-    author.append(info_container.cloneNode(true));
-
+    author.className = 'book-card-author';
+    author.innerText = book.author;
+    
     let numOfPages = document.createElement('div');
     numOfPages.className = 'book-card-element';
     label.innerText = 'Total Pages: ';
@@ -80,15 +73,21 @@ function displayBook(book) {
     deleteBtn.addEventListener('click', ()=> {
         removeBookFromLibrary(book.id);
     })
-    deleteBtn.className = 'book-remove-btn';
+    deleteBtn.className = 'btn';
+
+    let info = document.createElement('div');
+    info.className = 'book-card-info';
+    info.append(title);
+    info.append(author);
+    info.append(numOfPages);
+    info.append(isRead);
+
 
     let card = document.createElement('div');
     card.className = 'book-card';
-    card.append(title);
-    card.append(author);
-    card.append(numOfPages);
-    card.append(isRead);
+    card.append(info);
     card.append(deleteBtn);
+
 
     document.querySelector('.library').append(card);
 }

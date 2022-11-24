@@ -1,6 +1,6 @@
 let library = [];
 let available_book_id = 1;
-let show_add_book_form = true;
+// let show_add_book_form = true;
 
 function Book(title, id, author, numOfPages, isRead) {
     this.title = title;
@@ -76,7 +76,7 @@ function displayBook(book) {
     isRead.append(info_container.cloneNode(true));
 
     let deleteBtn = document.createElement('button');
-    deleteBtn.innerText = 'Remove book';
+    deleteBtn.innerText = 'Remove';
     deleteBtn.addEventListener('click', ()=> {
         removeBookFromLibrary(book.id);
     })
@@ -103,22 +103,22 @@ function displayLibrary() {
     })
 }
 
-function toggle_add_book_form() {
-    let add_book_form = document.querySelector('.add-book-form');
+// function toggle_add_book_form() {
+//     let add_book_form = document.querySelector('.add-book-form');
 
-    if (show_add_book_form) {
-        add_book_form.style.display = 'flex';
-    } else {
-        add_book_form.style.display = 'none';
-    }
-    show_add_book_form = !show_add_book_form;
-}
+//     if (show_add_book_form) {
+//         add_book_form.style.display = 'flex';
+//     } else {
+//         add_book_form.style.display = 'none';
+//     }
+//     show_add_book_form = !show_add_book_form;
+// }
 
 function main() {
     document.querySelector('.add-book-form-submit-btn').addEventListener('click', createBook);
-    document.querySelector('.add-book-btn').addEventListener('click', toggle_add_book_form);
+    // document.querySelector('.add-book-btn').addEventListener('click', toggle_add_book_form);
 
-    toggle_add_book_form();
+    // toggle_add_book_form();
     addBooktoLibrary('book name', 'dude', 15, false);
     // addBooktoLibrary('great book', 'other dude', 156, true);
     // addBooktoLibrary('some book name', 'dude', 215, false);

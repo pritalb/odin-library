@@ -104,6 +104,9 @@ function displayLibrary() {
 }
 
 function main() {
-    document.querySelector('.add-book-form-submit-btn').addEventListener('click', createBook);
+    document.querySelector('.add-book-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        createBook();
+    });
  }
 main()

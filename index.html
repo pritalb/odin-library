@@ -15,25 +15,25 @@
         <div class="sidebar">
             <h1> Library </h1>
         
-            <div class="add-book-form">
+            <form class="add-book-form">
                 <div class="add-book-form-element">
-                    <label for="title"> Book Title </label> <input type="text" name="title" class="title book-form-input" maxlength="64">
+                    <label for="title"> Book Title </label> <input type="text" name="title" class="title book-form-input" maxlength="64" required>
                 </div>
         
                 <div class="add-book-form-element">
-                    <label for="author"> Author </label> <input type="text" name="author" class="author book-form-input" maxlength="50">
+                    <label for="author"> Author </label> <input type="text" name="author" class="author book-form-input" maxlength="50" required>
                 </div>
         
                 <div class="add-book-form-element">
-                    <label for="num-of-pages"> Number of Pages </label> <input type="text" name="num-of-pages" class="num-of-pages book-form-input">
+                    <label for="num-of-pages"> Number of Pages </label> <input type="text" name="num-of-pages" class="num-of-pages book-form-input" required>
                 </div>
         
                 <div class="add-book-form-element-checkbox">
-                    <label for="is-read"> Have you read it? </label> <input type="checkbox" name="is-read" class="is-read">
+                    <label for="is-read"> Have you read it? </label> <input type="checkbox" name="is-read" class="is-read" required>
                 </div>
                 
                 <button class="add-book-form-submit-btn btn"> Submit </button>
-            </div>
+            </form>
         </div>
         
         <div class="library">
